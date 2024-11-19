@@ -1,0 +1,63 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Update A User</title>
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+
+
+
+<body>
+    <div class="topnav">
+        <a href="/">Danh sách tài khoản</a>
+        <a class="active" href="/updateAccount-G/:idTK">Cập nhật tài khoản</a>
+      </div>
+      <div class="form-add-new">
+
+        <form action="/updateAccount-P" method="POST"><!-- action -->
+            
+            <fieldset>
+
+                <legend>Cập nhật tài khoản</legend>
+
+                <div class="input-group d-none">
+                    
+                    <label>ID: </label>
+                    <input type="text" name="idAc" value="<%= accountEdit.accountId %>">
+
+                </div>
+
+                
+                <div class="input-group">
+                    
+                    <label>Tài khoản: </label>
+                    <input type="text" name="taikhoan" value="<%= accountEdit.accountName %>">
+
+                </div>
+
+                <div class="input-group">
+                     
+                    <label>Mật khẩu: </label>
+                    <input type="text" name="matkhau" value="<%= accountEdit.accountPassword %>">
+
+                </div>
+
+                <div class="input-group">
+                    
+                    <label>Quyền: </label>
+                    <input type="text" name="quyen" value="<%= accountEdit.accountPermissions %>">
+
+                </div>
+
+                <div>
+                    <button>Cập nhật</button>
+                </div>
+
+            </fieldset>
+
+        </form>
+      </div>
+      
+</body>
+</html>

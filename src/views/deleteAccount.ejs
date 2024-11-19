@@ -1,0 +1,49 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delete  A User</title>
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+
+
+
+<body>
+    <div class="topnav">
+        <a href="/">Danh sách tài khoản</a>
+        <a href="/deletAccount-G">Xóa tài khoản</a>
+      </div>
+      <div class="form-add-new">
+
+        <form action="/deletAccount-P" method="POST"><!-- action -->
+            
+            <fieldset>
+
+                <legend>Xóa tài khoản</legend>
+
+                <div class="input-group d-none">
+                    
+                    <label>Id: </label>
+                    <input type="text" name="idAc" value="<%= accountEdit.accountId %>">
+
+                </div>
+
+                
+                <div class="input-group">
+                    
+                    <label>Are you sure to delete this user with Accout name: </label>
+                    <input type="text" name="taikhoan" value="<%= accountEdit.accountName %>">
+
+                </div>
+
+                <div>
+                    <button>Yes</button>
+                </div>
+
+            </fieldset>
+
+        </form>
+      </div>
+      
+</body>
+</html>

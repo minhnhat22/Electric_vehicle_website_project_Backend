@@ -1,0 +1,86 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Danh sách tài khoản</title>
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+
+<style>
+    table {
+      border-collapse: collapse;
+      width: 100%;
+    }
+    
+    .table-container {
+    padding: 15px 20px;
+    }
+
+    .title {
+    font-size: 25px;
+    font-weight: 600;
+    padding-bottom: 10px;
+    }
+
+    th, td {
+      padding: 8px;
+      text-align: left;
+      border-bottom: 1px solid #ddd;
+    }
+    
+    tr:hover {background-color: #ccc;}
+</style>
+
+<body>
+    <div class="topnav">
+        <a class="active" href="/">Danh sách tài khoản</a>
+        <a href="/createAccount-G">Thêm tài khoản</a>
+    </div>
+    <div class="table-container">
+        <table>
+            <tr>
+            <th>ID</th>
+            <th>Tài khoản</th>
+            <th>Mật khẩu</th>
+            <th>Quyền</th>
+            <th>Action</th>
+            </tr>
+            
+
+            <!-- <% for (let i = 0; i < accountList.length; i++) { %>
+                <tr>
+                    <td><%= accountList[i].id %></td>
+                    <td><%= accountList[i].email %></td>
+                    <td><%= accountList[i].name %></td>
+                    <td><%= accountList[i].city %></td>
+                    <td>
+                        <button>Edit</button>
+                        <button>Delete</button>
+                    </td>
+                </tr>
+            <% } %> -->
+
+            <!-- Forech is a more explicit repeating structures -->
+            <% accountList.forEach(function(account) { %>
+                <tr>
+                    <td><%= account.accountId %></td>
+                    <td><%= account.accountName %></td>
+                    <td><%= account.accountPassword %></td>
+                    <td><%= account.accountPermissions	 %></td>
+                    <td>
+                        <form action="/updateAccount-G/<%= account.accountId %>" method="GET">
+                            <button>Edit</button>
+                        </form>
+
+                        <form action="/deletAccount-G/<%= account.accountId %>" method="GET">
+                            <button>Delete</button>
+                        </form>
+                        
+                    </td>
+                </tr>
+             <% }); %> 
+
+        </table>
+    </div>
+</body>
+</html>

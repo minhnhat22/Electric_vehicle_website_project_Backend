@@ -1,0 +1,55 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thêm tài khoản</title>
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+
+
+
+<body>
+    <div class="topnav">
+        <a href="/">Danh sách tài khoản</a>
+        <a class="active" href="/createAccount-G">Thêm tài khoản</a>
+      </div>
+      <div class="form-add-new">
+
+        <form action="/createAccount-P" method="POST"><!-- action -->
+            
+            <fieldset>
+
+                <legend>Thêm tài khoản mới</legend>
+                
+                <div class="input-group">
+                    
+                    <label>Tên tài khoản: </label>
+                    <input type="text" id="EmailId" name="taikhoan">
+
+                </div>
+
+                <div class="input-group">
+                     
+                    <label>Mật khẩu </label>
+                    <input type="text" name="matkhau">
+
+                </div>
+
+                <div class="input-group">
+                    
+                    <label>Quyền </label>
+                    <input type="text" name="quyen">
+
+                </div>
+
+                <div>
+                    <button>Thêm</button>
+                </div>
+
+            </fieldset>
+
+        </form>
+      </div>
+      
+</body>
+</html>
